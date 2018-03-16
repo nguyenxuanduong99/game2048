@@ -30,10 +30,10 @@ void introduction()
 	system("color 9");
 	cout<<"                              Huong dan tro choi :                            "<<endl;
 	cout<<"                                                                              "<<endl;
-	cout<<"          Su dung mui ten "<<char(24)<<" de di chuyen                         "<<endl;
-	cout<<"          Su dung mui ten "<<char(25)<<" de di chuyen                         "<<endl;
-	cout<<"          Su dung mui ten "<<char(26)<<" de di chuyen                         "<<endl;
-	cout<<"          Su dung mui ten "<<char(27)<<" de di chuyen                         "<<endl;
+	cout<<"          Su dung mui ten "<<char(24)<<" de di chuyen len tren                "<<endl;
+	cout<<"          Su dung mui ten "<<char(25)<<" de di chuyen xuong duoi              "<<endl;
+	cout<<"          Su dung mui ten "<<char(26)<<" de di chuyen sang phai               "<<endl;
+	cout<<"          Su dung mui ten "<<char(27)<<" de di chuyen sang trai               "<<endl;
 	cout<<"                                                                              "<<endl;
 	cout<<"                            An phim bat ki de tiep tuc                        "<<endl;
 	getch();
