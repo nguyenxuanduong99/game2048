@@ -27,7 +27,6 @@ void introduction()
 	cout<<"                            An phim bat ki de tiep tuc                        "<<endl;
 	getch();
 	system("cls");
-	system("color 9");
 	cout<<"                              Huong dan tro choi :                            "<<endl;
 	cout<<"                                                                              "<<endl;
 	cout<<"          Su dung mui ten "<<char(24)<<" de di chuyen len tren                "<<endl;
