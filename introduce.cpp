@@ -4,9 +4,9 @@
 using namespace std;
 void introduction()
 {
-    cout<<"                        CHAO MUNG BAN DEN VOI TRO CHOI                        "<<endl;
-    cout<<"                                                                              "<<endl;
-    cout<<"   222222222222222         000000000            444444444       888888888     "<<endl;system("color 0");Sleep(10);
+	cout<<"                        CHAO MUNG BAN DEN VOI TRO CHOI                        "<<endl;
+        cout<<"                                                                              "<<endl;
+        cout<<"   222222222222222         000000000            444444444       888888888     "<<endl;system("color 0");Sleep(10);
 	cout<<"  2:::::::::::::::22     00:::::::::00         4::::::::4     88:::::::::88   "<<endl;system("color 1");Sleep(10);
 	cout<<"  2::::::222222:::::2  00:::::::::::::00      4:::::::::4   88:::::::::::::88 "<<endl;system("color 2");Sleep(10);
 	cout<<"  2222222     2:::::2 0:::::::000:::::::0    4::::44::::4  8::::::88888::::::8"<<endl;system("color 3");Sleep(10);
