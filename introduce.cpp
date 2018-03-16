@@ -29,10 +29,10 @@ void introduction()
 	system("cls");
 	cout<<"                              Huong dan tro choi :                            "<<endl;
 	cout<<"                                                                              "<<endl;
-	cout<<"          Su dung mui ten "<<(char)1<<" de di chuyen                         "<<endl;
-	cout<<"          Su dung mui ten "<<(char)2<<" de di chuyen                         "<<endl;
-	cout<<"          Su dung mui ten "<<(char)3<<" de di chuyen                         "<<endl;
-	cout<<"          Su dung mui ten "<<(char)4<<" de di chuyen                         "<<endl;
+	cout<<"          Su dung mui ten "<<(char)24<<" de di chuyen                         "<<endl;
+	cout<<"          Su dung mui ten "<<(char)25<<" de di chuyen                         "<<endl;
+	cout<<"          Su dung mui ten "<<(char)26<<" de di chuyen                         "<<endl;
+	cout<<"          Su dung mui ten "<<(char)27<<" de di chuyen                         "<<endl;
 	cout<<"                                                                              "<<endl;
 	cout<<"                            An phim bat ki de tiep tuc                        "<<endl;
 	getch();
