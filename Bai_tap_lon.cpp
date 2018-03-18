@@ -7,6 +7,12 @@
 using namespace std;
 int a[4][4]={0};
 int score=0,check=0,test=0;
+void textcolor(int x)
+{
+	HANDLE mau;
+	mau=GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(mau,x);
+}
 void introduction()
 {
     cout<<"                        CHAO MUNG BAN DEN VOI TRO CHOI                        "<<endl;
@@ -60,71 +66,88 @@ void drawFrame()
         {
             if(i==0&&j==0)
             {
+                textcolor(1);
                 gotoxy(j,i);
                 cout<<char(201);
             }
             else if(i==16&&j==0)
             {
+                textcolor(1);
                 gotoxy(j,i);
                 cout<<char(200);
             }
             else if(i==0&&j==32)
             {
+                textcolor(1);
                 gotoxy(j,i);
                 cout<<char(187);
 
             }
             else if(i==16&&j==32)
             {
+                textcolor(1);
                 gotoxy(j,i);
                 cout<<char(188);
             }
             else if((i==4||i==8||i==12)&&j==0)
             {
+                textcolor(1);
                 gotoxy(j,i);
                 cout<<char(199);
             }
             else if((i==4||i==8||i==12)&&j==32)
             {
+                textcolor(1);
                 gotoxy(j,i);
                 cout<<char(182);
             }
             else if(i==0&&(j==8||j==16||j==24))
             {
+                textcolor(1);
                 gotoxy(j,i);
                 cout<<char(209);
             }
             else if(i==16&&(j==8||j==16||j==24))
             {
+                textcolor(1);
                 gotoxy(j,i);
                 cout<<char(207);
             }
             else if((i==4||i==8||i==12)&&(j==8||j==16||j==24))
             {
+                textcolor(1);
                 gotoxy(j,i);
                 cout<<char(197);
             }
             else if(i==4||i==8||i==12)
             {
+                textcolor(1);
                 gotoxy(j,i);
                 cout<<char(196);
             }
             else if(i==0||i==16)
             {
+                textcolor(1);
                 gotoxy(j,i);
                 cout<<char(205);
             }
             else if(j==8||j==16||j==24)
             {
+                textcolor(1);
                 gotoxy(j,i);
                 cout<<char(179);
             }
             else if(j==0||j==32)
             {
+                textcolor(1);
                 gotoxy(j,i);
                 cout<<char(186);
             }
         }
+        gotoxy(35,2);
+        cout<<"Diem cua ban: ";
+        gotoxy(50,2);
+        cout<<score;
 }
 void fillthematrix()
 {
@@ -135,21 +158,48 @@ void fillthematrix()
             {
                 if(a[i][j]==2||a[i][j]==4||a[i][j]==8)
                     {
+                        if(a[i][j]==2)
+                            textcolor(2);
+                        if(a[i][j]==4)
+                            textcolor(3);
+                        if(a[i][j]==8)
+                            textcolor(4);
                         gotoxy(4+j*8,2+i*4);
                         cout<<a[i][j];
                     }
                 if(a[i][j]==16||a[i][j]==32||a[i][j]==64)
                     {
+                        if(a[i][j]==16)
+                            textcolor(5);
+                        if(a[i][j]==32)
+                            textcolor(6);
+                        if(a[i][j]==64)
+                            textcolor(7);
+                        textcolor(2);
                         gotoxy(4+j*8,2+i*4);
                         cout<<a[i][j];
                     }
                 if(a[i][j]==128||a[i][j]==256||a[i][j]==512)
                     {
+                        if(a[i][j]==128)
+                            textcolor(8);
+                        if(a[i][j]==256)
+                            textcolor(9);
+                        if(a[i][j]==512)
+                            textcolor(10);
+                        textcolor(3);
                         gotoxy(3+j*8,2+i*4);
                         cout<<a[i][j];
                     }
                 if(a[i][j]==1024||a[i][j]==2048||a[i][j]==4096)
                     {
+                        if(a[i][j]==1024)
+                            textcolor(11);
+                        if(a[i][j]==2048)
+                            textcolor(12);
+                        if(a[i][j]==4096)
+                            textcolor(13);
+                        textcolor(4);
                         gotoxy(3+j*8,2+i*4);
                         cout<<a[i][j];
                     }
@@ -369,6 +419,19 @@ void endgame()
     if(check==1)
         cout<<"you are victory";
 }
+int getkey()
+{
+    char c=_getch();
+    if(c=='w')
+        turnup();
+    if(c=='s')
+        turndown();
+    if(c=='d')
+        turnright();
+    if(c=='a')
+        turnleft();
+
+}
 int main()
 {
     int x;
@@ -377,15 +440,7 @@ int main()
     drawFrame();
     fillthematrix();
     do{
-        cin>>x;
-        if(x==1)
-            turnup();
-        if(x==2)
-            turndown();
-        if(x==3)
-            turnright();
-        if(x==4)
-            turnleft();
+        getkey();
         system("cls");
         drawFrame();
         fillthematrix();
